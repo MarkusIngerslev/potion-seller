@@ -1,0 +1,353 @@
+{
+  "nodes": [
+    {
+      "id": "start",
+      "title": "Potion Seller's Shop",
+      "description": "You approach a dimly lit shop, known across the land for its potent potions. The air is thick with the scent of herbs and mystery.",
+      "choices": [
+        {
+          "name": "Ask about the strongest potions",
+          "nodeId": "strongest_potions"
+        },
+        { "name": "Browse the shelves", "nodeId": "browse_shelves" },
+        { "name": "Leave the shop", "nodeId": "leave_shop" }
+      ]
+    },
+    {
+      "id": "healing",
+      "title": "Healing Potions",
+      "description": "The shopkeeper shows you a shelf of red potions. 'These can cure any wound,' he says.",
+      "choices": [
+        {
+          "name": "Buy a small healing potion (10 gold)",
+          "nodeId": "bought_healing"
+        },
+        { "name": "Return to browse", "nodeId": "start" }
+      ]
+    },
+    {
+      "id": "mana",
+      "title": "Mana Potions",
+      "description": "Glowing blue vials catch your eye. 'Perfect for restoring magical energy,' the keeper explains.",
+      "choices": [
+        { "name": "Purchase a mana potion (15 gold)", "nodeId": "bought_mana" },
+        { "name": "Return to browse", "nodeId": "start" }
+      ]
+    },
+    {
+      "id": "strength",
+      "title": "Strength Potions",
+      "description": "The shopkeeper flexes his arm and points to green potions. 'With this, you could lift a mountain,' he brags.",
+      "choices": [
+        {
+          "name": "Buy a strength potion (20 gold)",
+          "nodeId": "bought_strength"
+        },
+        { "name": "Return to browse", "nodeId": "start" }
+      ]
+    },
+    {
+      "id": "rare_potions",
+      "title": "Rare Potions",
+      "description": "The shopkeeper grins mischievously. 'Ah, you have a keen eye. Let me show you something special.'",
+      "choices": [
+        {
+          "name": "Look at the Elixir of Eternity",
+          "nodeId": "elixir_eternity"
+        },
+        {
+          "name": "Inspect the Potion of Luck",
+          "nodeId": "potion_luck"
+        },
+        { "name": "Ask about the cursed potion", "nodeId": "cursed_potion" }
+      ]
+    },
+    {
+      "id": "elixir_eternity",
+      "title": "Elixir of Eternity",
+      "description": "A golden liquid swirls endlessly inside the bottle. 'This grants immortality, but at what cost?' the shopkeeper warns.",
+      "choices": [
+        { "name": "Buy the elixir (50 gold)", "nodeId": "bought_elixir" },
+        { "name": "Change your mind", "nodeId": "rare_potions" }
+      ]
+    },
+    {
+      "id": "potion_luck",
+      "title": "Potion of Luck",
+      "description": "A shimmering green potion sparkles. 'Drink this, and fortune will always favor you,' the shopkeeper assures.",
+      "choices": [
+        { "name": "Buy the potion (30 gold)", "nodeId": "bought_luck" },
+        { "name": "Change your mind", "nodeId": "rare_potions" }
+      ]
+    },
+    {
+      "id": "cursed_potion",
+      "title": "The Cursed Potion",
+      "description": "The shopkeeper hesitates before revealing a dark, swirling potion. 'This is not for the faint-hearted. It brings great power but also... challenges.'",
+      "choices": [
+        {
+          "name": "Buy the cursed potion (25 gold)",
+          "nodeId": "bought_cursed"
+        },
+        { "name": "Step back cautiously", "nodeId": "rare_potions" }
+      ]
+    },
+    {
+      "id": "bought_healing",
+      "title": "Small Healing Potion",
+      "description": "You purchase the potion and feel prepared for your next adventure.",
+      "choices": [
+        { "name": "Return to browse", "nodeId": "start" },
+        { "name": "Leave the shop", "nodeId": "leave_shop" }
+      ]
+    },
+    {
+      "id": "bought_mana",
+      "title": "Mana Potion",
+      "description": "You buy the mana potion and feel your magical reserves surge.",
+      "choices": [
+        { "name": "Return to browse", "nodeId": "start" },
+        { "name": "Leave the shop", "nodeId": "leave_shop" }
+      ]
+    },
+    {
+      "id": "bought_strength",
+      "title": "Strength Potion",
+      "description": "With this potion, you feel like you could conquer any physical challenge.",
+      "choices": [
+        { "name": "Return to browse", "nodeId": "start" },
+        { "name": "Leave the shop", "nodeId": "leave_shop" }
+      ]
+    },
+    {
+      "id": "bought_elixir",
+      "title": "Elixir of Eternity",
+      "description": "The shopkeeper warns you as you leave, 'Eternity is a long time. Choose your actions wisely.'",
+      "choices": [
+        {
+          "name": "Step outside and begin your eternal adventure",
+          "nodeId": "eternal_adventure"
+        }
+      ]
+    },
+    {
+      "id": "bought_luck",
+      "title": "Potion of Luck",
+      "description": "You feel a strange shift in the air around you, as if the universe now bends slightly in your favor.",
+      "choices": [
+        { "name": "Test your luck", "nodeId": "test_luck" },
+        { "name": "Return to browse", "nodeId": "start" }
+      ]
+    },
+    {
+      "id": "bought_cursed",
+      "title": "The Cursed Potion",
+      "description": "A chill runs down your spine as you take the potion. The shopkeeper smirks, 'Good luck... you'll need it.'",
+      "choices": [{ "name": "Confront the curse", "nodeId": "curse_challenge" }]
+    },
+    {
+      "id": "browse_shelves",
+      "title": "Browsing the Shelves",
+      "description": "You see rows of potions with labels like 'Healing', 'Mana', and 'Strength'.",
+      "choices": [
+        { "name": "Ask about healing potions", "nodeId": "healing" },
+        { "name": "Inquire about mana potions", "nodeId": "mana" },
+        { "name": "Look at strength potions", "nodeId": "strength" },
+        {
+          "name": "Ask the shopkeeper about rare potions",
+          "nodeId": "rare_potions"
+        }
+      ]
+    },
+    {
+      "id": "strongest_potions",
+      "title": "A Knight's Request",
+      "description": "You enter the potion shop seeking the strongest potions.",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Hello, Potion Seller, I am going into battle and I want your strongest potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "My potions are too strong for you, traveler."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Insist on the strongest potions",
+          "nodeId": "convince_1"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_1",
+      "title": "Continuing the Request",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, I tell you I am going into battle, and I want only your strongest potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "You can't handle my potions. They're too strong for you."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Keep insisting",
+          "nodeId": "convince_2"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_2",
+      "title": "The Knight's Persistence",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, listen to me; I want only your strongest potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "My potions would kill you, traveler. You cannot handle my potions."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Demand the potions again",
+          "nodeId": "convince_3"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_3",
+      "title": "The Knight's Resolve",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, enough of these games. I'm going into battle and I need your strongest potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "My strongest potions would kill you, traveler. You can't handle my strongest potions. You'd better go to a seller that sells weaker potions."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Insist with more urgency",
+          "nodeId": "convince_4"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_4",
+      "title": "The Final Plea",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, I'm telling you right now; I'm going into battle and I need only your strongest potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "You don't know what you ask, traveler. My strongest potions will kill a dragon, let alone a man. You need a seller that sells weaker potions, because my potions are too strong."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Make one last desperate attempt",
+          "nodeId": "convince_5"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_5",
+      "title": "The Breaking Point",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, I'm telling you I need your strongest potions. I'm going into battle! I'm going to battle and I need your strongest potions!"
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "You can't handle my strongest potions! No one can! My strongest potions aren't fit for a beast let alone a man."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Beg for the potions",
+          "nodeId": "convince_6"
+        },
+        { "name": "Storm out of the shop", "nodeId": "storm_out" }
+      ]
+    },
+    {
+      "id": "convince_6",
+      "title": "The Knight's Desperation",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Potion Seller, what do I have to tell you to get your potions? Why won't you trust me with your strongest potions, Potion Seller? I need them if I'm to be successful in the battle!"
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "I can't give you my strongest potions because my strongest potions are only for the strongest beings and you are of the weakest."
+        }
+      ],
+      "choices": [
+        {
+          "name": "Admit defeat and leave",
+          "nodeId": "storm_out"
+        },
+        { "name": "Argue back angrily", "nodeId": "confrontation" }
+      ]
+    },
+    {
+      "id": "confrontation",
+      "title": "A Heated Exchange",
+      "dialogue": [
+        {
+          "speaker": "Knight",
+          "text": "Well then that's it, Potion Seller. I'll go elsewhere. I'll go elsewhere for my potions."
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "That's what you'd better do."
+        },
+        {
+          "speaker": "Knight",
+          "text": "I'll go elsewhere for my potions and I'll never come back!"
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "Good. You're not welcome here! My potions are only for the strongest and you're clearly are not of the strongest you're clearly the weakest."
+        },
+        {
+          "speaker": "Knight",
+          "text": "You've had your say, Potion Seller but I'll have mine. You're a rascal, you're a rascal with no respect for knights. No respect for anything... except your potions!"
+        },
+        {
+          "speaker": "Potion Seller",
+          "text": "Why respect knights... when my potions can do anything that you can."
+        }
+      ],
+      "choices": [{ "name": "Leave the shop angrily", "nodeId": "storm_out" }]
+    },
+    {
+      "id": "storm_out",
+      "title": "Leaving the Shop",
+      "description": "You leave the Potion Seller's shop, frustrated and empty-handed. Perhaps another merchant will aid you in your quest.",
+      "choices": [
+        {
+          "name": "Search for another potion shop",
+          "nodeId": "start"
+        }
+      ]
+    }
+  ]
+}
