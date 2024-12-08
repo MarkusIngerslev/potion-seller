@@ -169,7 +169,7 @@
       "id": "bought_cursed",
       "title": "The Cursed Potion",
       "description": "A chill runs down your spine as you take the potion. The shopkeeper smirks, 'Good luck... you'll need it.'",
-      "choices": [{ "name": "Confront the curse", "nodeId": "curse_challenge" }]
+      "choices": [{ "name": "Continue you journy", "nodeId": "start" }]
     },
     {
       "id": "strongest_potions",
