@@ -14,6 +14,17 @@
       ]
     },
     {
+      "id": "leave_shop",
+      "title": "Leaving the Shop",
+      "description": "You exit the Potion Seller's shop, the door creaking shut behind you. The world awaits your next adventure.",
+      "choices": [
+        {
+          "name": "Continue your journey",
+          "nodeId": "start"
+        }
+      ]
+    },
+    {
       "id": "healing",
       "title": "Healing Potions",
       "description": "The shopkeeper shows you a shelf of red potions. 'These can cure any wound,' he says.",
@@ -47,6 +58,20 @@
       ]
     },
     {
+      "id": "browse_shelves",
+      "title": "Browsing the Shelves",
+      "description": "You see rows of potions with labels like 'Healing', 'Mana', and 'Strength'.",
+      "choices": [
+        { "name": "Ask about healing potions", "nodeId": "healing" },
+        { "name": "Inquire about mana potions", "nodeId": "mana" },
+        { "name": "Look at strength potions", "nodeId": "strength" },
+        {
+          "name": "Ask the shopkeeper about rare potions",
+          "nodeId": "rare_potions"
+        }
+      ]
+    },
+    {
       "id": "rare_potions",
       "title": "Rare Potions",
       "description": "The shopkeeper grins mischievously. 'Ah, you have a keen eye. Let me show you something special.'",
@@ -59,7 +84,8 @@
           "name": "Inspect the Potion of Luck",
           "nodeId": "potion_luck"
         },
-        { "name": "Ask about the cursed potion", "nodeId": "cursed_potion" }
+        { "name": "Ask about the cursed potion", "nodeId": "cursed_potion" },
+        { "name": "Return to browse", "nodeId": "start" }
       ]
     },
     {
@@ -144,20 +170,6 @@
       "title": "The Cursed Potion",
       "description": "A chill runs down your spine as you take the potion. The shopkeeper smirks, 'Good luck... you'll need it.'",
       "choices": [{ "name": "Confront the curse", "nodeId": "curse_challenge" }]
-    },
-    {
-      "id": "browse_shelves",
-      "title": "Browsing the Shelves",
-      "description": "You see rows of potions with labels like 'Healing', 'Mana', and 'Strength'.",
-      "choices": [
-        { "name": "Ask about healing potions", "nodeId": "healing" },
-        { "name": "Inquire about mana potions", "nodeId": "mana" },
-        { "name": "Look at strength potions", "nodeId": "strength" },
-        {
-          "name": "Ask the shopkeeper about rare potions",
-          "nodeId": "rare_potions"
-        }
-      ]
     },
     {
       "id": "strongest_potions",
